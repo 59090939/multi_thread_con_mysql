@@ -37,8 +37,8 @@ int main(int argc,char *argv[]) {
     int rc, i, j,detachstate;
 
     if( argc != 8 ) {  
-        fprintf(stderr,"%s <target ip> <target port> <username> <password> <connect_num> <sleep_time> \n", argv[0]);  
-        fprintf(stderr, "For example 192.168.1.1 root password dbname port 1000(connection) 600(seconds) \n");  
+        fprintf(stderr,"%s <target ip> <username> <password> <dbname> <port> <connect_num> <sleep_time> \n", argv[0]);  
+        fprintf(stderr, "For example ip root password dbname port 1000(connection) 600(seconds) \n");  
         return -1;  
     } 
     strcpy( ip, argv[1] );
@@ -51,9 +51,8 @@ int main(int argc,char *argv[]) {
         printf("Name is not empty! \n");
         return -1;
     }
-   
-    strcpy(pass,argv[3]);
 
+    strcpy(pass,argv[3]);
     strcpy(db,argv[4]);
 
     port = atoi( argv[5] );
