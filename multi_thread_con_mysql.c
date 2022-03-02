@@ -1,7 +1,9 @@
 /********
-* it used to test MySQL
+* It used to test MySQL 
 * gcc -o multi_thread_con_mysql $(mysql_config --cflags) multi_thread_con_mysql.c $(mysql_config --libs)
+* by @xjp 20220206
 *********/
+
 #include <stdio.h>
 #include "mysql.h"
 #include <pthread.h>
